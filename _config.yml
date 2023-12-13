@@ -36,9 +36,10 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/j-briant # change to your github homepage
+    - https://www.linkedin.com/in/julien-briant/
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    
 
 google_site_verification: # fill in to your verification string
 
