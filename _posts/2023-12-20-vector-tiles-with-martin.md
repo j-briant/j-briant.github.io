@@ -7,7 +7,7 @@ tags: [tutorial, vector, tiles, rust]     # TAG names should always be lowercase
 
 There are some amazing tools out there, and they are getting build fast. I haven't had the opportunity to work with vector tiles during my day-to-day jobs, but I wanted to explore what it is and how to set some things up, just for the fun of it. We'll see here how to start using [Martin](https://github.com/maplibre/martin), a vector tile server built in Rust serving PostGIS data.
 
-# Vector tiles
+## Vector tiles
 
 The standard has been set by [Mapbox](https://www.mapbox.com/). In the same manner a WMTS serves raster tiles, vector tiles allow for the visualization of large volumes of data over the web, but as their name suggests, they are vectors. 
 
@@ -19,7 +19,7 @@ It comes with some advantages compared to raster formats:
 
 It's an amazing standard to visualize spatial data in a web map. Obviously it's not suitable for all kinds of data, you have to have discrete data that make sense to be visualized as vector; I doubt that raw satellites images as vector tiles are a good idea.
 
-# Installing PostgreSQL and PostGIS
+## Installing PostgreSQL and PostGIS
 
 First thing first, we need to store data somewhere. Martin is designed to be used with PostGIS, PMTiles and MBTiles, we'll explore the PostGIS alternative.
 
@@ -55,7 +55,7 @@ create extension postgis;
 
 We won't cover here the more extensive tuning of the database. You should be set on the database side for this example. 
 
-# Downloading some data
+## Downloading some data
 
 Obviously you'll want some data to serve as vector tiles. In a production environment you'll probably want to serve your own data, so this step would probably not be necessary. For the example we don't have any data yet, so we'll use some from osm through [GeoFabrik](https://download.geofabrik.de/). Since I'm in Switzerland, let's download data over the country:
 
@@ -73,7 +73,7 @@ osm2pgsql -d martin_db -U martin_usr switzerland-latest.osm.pbf
 
 We now have osm data over a whole country, easy right?
 
-# Now install Martin
+## Now install Martin
 
 Here comes the best part, the vector tile server itself. There are multiple ways to start working with Martin, we'll use rust and its package manager [cargo](https://doc.rust-lang.org/book/ch01-03-hello-cargo.html). If you don't want to install those on your server you might prefer the [Docker installation](https://maplibre.org/martin/run-with-docker.html), or simply using binaries.
 
@@ -92,7 +92,7 @@ martin --help
 
 And that's it! Martin's here.
 
-# Can't be that simple right?
+## Can't be that simple right?
 
 Finally, you can run your new server:
 
@@ -133,7 +133,7 @@ curl http://0.0.0.0:3000/catalog | json_pp
 }
 ```
 
-# Visualize data using QGIS
+## Visualize data using QGIS
 
 Once the server is running we can easily visualize our data in a client. Starting QGIS 3.14, 
 
@@ -149,6 +149,6 @@ You should see a rather absurd amount of data.
 
 ![visualization](/assets/img/posts/2023-12-20-vector-tiles-with-martin/visualization.png){:w="1000" h="400"}
 
-# To conclude
+## To conclude
 
 Here is how to get started with Martin, a rust vector tile server. It's just the start, we don't cover here the creation of symbology and more in depth configurations and optimization, but it gives an idea of how easy and powerful such a tool can be.
