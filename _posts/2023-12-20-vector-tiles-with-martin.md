@@ -60,7 +60,7 @@ We won't cover here the more extensive tuning of the database. You should be set
 Obviously you'll want some data to serve as vector tiles. In a production environment you'll probably want to serve your own data, so this step would probably not be necessary. For the example we don't have any data yet, so we'll use some from osm through [GeoFabrik](https://download.geofabrik.de/). Since I'm in Switzerland, let's download data over the country:
 
 ```sh
-curl https://download.geofabrik.de/europe/switzerland-latest.osm.pbf -0
+curl https://download.geofabrik.de/europe/switzerland-latest.osm.pbf -O
 ```
 
 We are using `osm2pgsql` to import data into the database, so the `.pbf` format is ideal.
