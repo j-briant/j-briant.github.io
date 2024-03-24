@@ -32,7 +32,7 @@ It's nice and all, but how do we serve a W*S. Well for starters we need a server
 
 ### Install and configure qgis-server and nginx
 
-I'm on Ubuntu so I'll be using `apt`, and the installation includes the use of `systemd`. I'll also be working with the [ubuntugis ppa](http://ppa.launchpadcontent.net/ubuntugis/ppa/ubuntu/).
+I'm on Ubuntu so I'll be using `apt`, and the installation includes the use of `systemd`. I'll also be working with the [ubuntugis ppa](https://ppa.launchpadcontent.net/ubuntugis/ppa/ubuntu/).
 
 First add the ppa:
 
