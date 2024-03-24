@@ -9,13 +9,13 @@ While the geospatial world has its own particularities that sometimes make it di
 
 Being WMS, WMTS, WFS, WCS or any W*S, geoservices are everywhere and sometimes are a bit mysterious. But even without understanding the fundamentals of their definition, it's rather easy to get started. 
 
-We'll see how to install a (geo)server that will be responsible for serving our data, quickly prepare some data, and even see how you can use these services to update your data safely. We'll be using qgis-server here, because it's the most easy to use and the quickest way to get started.
+We'll see how to install a (geo)server that will be responsible for serving our data, quickly prepare some data, and even see how you can use these services to update your data safely. We'll be using [qgis-server](https://docs.qgis.org/3.34/en/docs/user_manual/index.html) here, because it's the most easy to use and the quickest way to get started.
 
 ## Some quick context
 
 You've probably heard about the [Open Geospatial Consortium](https://www.ogc.org/) (OGC), but to make it really short, if you hear about a standard regarding geospatial, the OGC is probably behind. At least it's the case for the geoservices we'll be diving into here. 
 
-And what are those geoservices? Well most of the time when we talk about "geoservice" we're referring to WMS, WMTS, WFS, WCS. They are a standardized way of accessing georeferenced data through the internet. The same way you reach a website or an API using an URL, you can access some geographic data if you know some URL (and have the tools that go with it). You can then use the data for your usecase: displaying a background map in your app, showing queriable data for an interactive webmap etc. The most common are:
+And what are those geoservices? Well most of the time when we talk about "geoservice" we're referring to WMS, WMTS, WFS, WCS. They are a standardized way of accessing georeferenced data through the internet. The same way you reach a website or an API using an URL, you can access some geographic data if you know some URL (and have the tools that go with it). You can then use the data for your use-case: displaying a background map in your app, showing queryable data for an interactive webmap etc. The most common are:
 
 * Web Map Service (**WMS**) --> probably the initial service. Used to display an image as .jpg or .png (see it as a background map)
 * Web Map Tiled Service (**WMTS**) --> the more efficient WMS. It's the same, but images are tiled to restricted the amount of data to be transferred to the client based on the display localization and the zoom level.
@@ -143,7 +143,7 @@ Create a project, add some data and apply the desired style. A quick example is 
 ![data-with-style](/assets/img/posts/2024-03-22-geoservices-with-qgis-server/qgis-data-prepared.png){: w="700"}
 _Data with some style_
 
-Once you're satisfied with the look of your data, you'll need to configure the project so it will tell qgis-server to proceed with the geoservice you want to serve. Go to *Project -> Properties -> QGIS Server* and complete the configuration as you wish. Under *Service Capabilities* you'll need to check the *Enable Service Capabilities* box, then select the different services you want to enable under the different tabs. Save your project under a folder accessible by the server user, in our example 'www-data'. If you're using file data in your project, such as a geopackage, save them in the same place. The WFS setup should look like somthing like below.
+Once you're satisfied with the look of your data, you'll need to configure the project so it will tell qgis-server to proceed with the geoservice you want to serve. Go to *Project -> Properties -> QGIS Server* and complete the configuration as you wish. Under *Service Capabilities* you'll need to check the *Enable Service Capabilities* box, then select the different services you want to enable under the different tabs. Save your project under a folder accessible by the server user, in our example 'www-data'. If you're using file data in your project, such as a geopackage, save them in the same place. The WFS setup should look like something like below.
 
 ![wfs-setup](/assets/img/posts/2024-03-22-geoservices-with-qgis-server/setup-wfs.png){: w="700"}
 _Data with some style_
@@ -156,20 +156,32 @@ _Data with some style_
 
 You can then edit the `env` file with the corresponding environment variables. For me it looks like:
 
-```env
+```
 QGIS_PROJECT_FILE=/etc/qgis-server/my_project.qgz
 QGIS_SERVER_LOG_STDERR=1
 QGIS_SERVER_LOG_LEVEL=3
 ```
 
-I use PostgreSQL data and have had troubles getting the server to reach the data, even on localhost but finally manage with the following:
+I use PostgreSQL data and have had troubles getting the server to reach the data, even on localhost but finally managed to have everything working with the following steps:
 
-* Make the project read the data using a service (create a pg_service.conf if not existing).
+* Make the project read the data using a PostgreSQL service (create a pg_service.conf if not existing).
 * Copy the pg_service.conf file somewhere accessible for the server.
 * Edit `/etc/nginx/fastcgi_params` and add `fastcgi_param  PGSERVICEFILE /path/to/service/pg_service.conf;`.
 * Restart everything.
 * Bonus: `touch` the project file.
 
-If everything works correctly, you should be able to reach [[localhost:8080/](http://localhost:8080/qgis-server/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities)](http://localhost:8080/qgis-server/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities) for WMS capabilities or [(http://localhost:8080/qgis-server/wfs3/)](http://localhost:8080/qgis-server/wfs3/) for the OGC-APIF description.
+If everything works correctly, you should be able to reach [localhost:8080/qgis-server/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities](http://localhost:8080/qgis-server/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities) for WMS capabilities or [http://localhost:8080/qgis-server/wfs3/](http://localhost:8080/qgis-server/wfs3/) for the OGC-APIF description and navigate the different endpoints defined in the OGC-APIF standard.
 
 You should now be able to also call these URL from QGIS using the correct url. Try to add a WFS/OGC-APIF using the http://localhost:8080/qgis-server/wfs3/ url (qgis-server in this example, but you can setup your server with a different url).
+
+## Going further
+
+We have the basics setup, now what can we do? Let's start by modifying some data.
+
+### Updating date through WFS
+
+(wip)
+
+### Protect our service with authentication
+
+(wip)
