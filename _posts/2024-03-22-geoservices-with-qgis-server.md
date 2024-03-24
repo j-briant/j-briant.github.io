@@ -178,7 +178,7 @@ You should now be able to also call these URL from QGIS using the correct url. T
 
 We have the basics setup, now what can we do? Let's start by modifying some data.
 
-### Updating date through WFS
+### Updating data through WFS
 
 (wip)
 
