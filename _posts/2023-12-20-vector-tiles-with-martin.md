@@ -2,7 +2,7 @@
 title: Serving vector tiles with Martin
 date: 2023-12-20 15:30:00
 categories: [Tutorial, Vector, Tiles]
-tags: [tutorial, vector, tiles, rust]     # TAG names should always be lowercase
+tags: [tutorial, vector, tiles, rust, martin, fast, openstreetmap, osm]     # TAG names should always be lowercase
 ---
 
 There are some amazing tools out there, and they are getting build fast. I haven't had the opportunity to work with vector tiles during my day-to-day jobs, but I wanted to explore what it is and how to set some things up, just for the fun of it. We'll see here how to start using [Martin](https://github.com/maplibre/martin), a vector tile server built in Rust serving PostGIS data.
