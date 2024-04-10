@@ -111,6 +111,11 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 
+# Sitemap generation
+url: "https://geothings.ch" # the base hostname & protocol for your site
+plugins:
+  - jekyll-sitemap
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
