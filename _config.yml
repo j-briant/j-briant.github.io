@@ -109,7 +109,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "www.geothings.ch"
+baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 
