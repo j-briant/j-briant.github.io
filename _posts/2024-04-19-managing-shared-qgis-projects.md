@@ -149,7 +149,7 @@ When working with a version control platform (such as GitLab or GitHub), you can
 
 ### Find an efficient way to share your project
 
-I find it bizarrely difficult to share a project with people. As said right [above](#version-control-you-project), a project is composed of multiple elements that work together: data, symbols, plugins, etc.
+I find it bizarrely difficult to share a project with people. As said right [above](#decompose-centralize-and-version-control-you-project), a project is composed of multiple elements that work together: data, symbols, plugins, etc.
 
 There are some ways of avoiding loosing information when sharing a project:
 
