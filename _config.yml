@@ -112,7 +112,7 @@ paginate: 10
 baseurl: ""
 
 # Sitemap generation
-url: "https://geothings.ch" # the base hostname & protocol for your site
+url: "https://www.geothings.ch" # the base hostname & protocol for your site
 plugins:
   - jekyll-sitemap
 
