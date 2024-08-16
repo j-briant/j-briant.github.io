@@ -28,8 +28,8 @@ The rebranding and the sell at the beginning of 2024 has changed things, and som
 
 As I said, I don't have anything against FME itself. It makes workflows easy to create and push to production, (spatial) data processing accessible to a broader audience and gives you time to focus on something else if you have a GIS role in your company (see [On GIS and their integration](https://www.geothings.ch/posts/on-gis/) for that part of the problem). But making yourself totally dependant on a proprietary solution, with a near monopoly on the field, **IS** a big problem, and honestly felt like a matter of time before it would happen. The situation is so problematic that some high level administrations (country level) are now negociating terms with Safe because they are so dependant on FME that they can't move easily from it, and will have no choice but to take the price hit if they don't act. That's were **digital sovereignty** enter the game, regaining control over our processes, data, and costs. Some links :
 
-*[Digital Sovereignty in Switzerland : the laboratory of federalism](https://access.archive-ouverte.unige.ch/access/metadata/bbf62d17-891e-46e4-bde8-5666dda99237/download)
-*[Framasoft](https://framasoft.org/en/)
+* [Digital Sovereignty in Switzerland : the laboratory of federalism](https://access.archive-ouverte.unige.ch/access/metadata/bbf62d17-891e-46e4-bde8-5666dda99237/download)
+* [Framasoft](https://framasoft.org/en/)
 
 If you work extensively with FME, I'd advise to take a step back and and have a look at what you need and how you could achieve this any other way, because most of the time, there are options, but we just don't see them anymore. FME has become such an automatism that everything else is a blur, and worst, we lose skills and control.
 
