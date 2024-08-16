@@ -95,7 +95,7 @@ The series of command line tools that come with GDAL/OGR make it very complete a
 
  You could reuse your previous SQL query with GDAL to extract your data and save it in GeoPackage for example, I could just save my query into a file named `query_file.sql` and run the following command:
 
-```
+```sh
 ogr2ogr -f GPKG -sql @query_file.sql output.gpkg "PG:service=input_db"
 ```
 
@@ -117,14 +117,14 @@ Not sure about what is so incredible about giving scheduling capabilities within
 
 I feel like I'm oversimplifying things but I can't see where. If your on Linux, you can schedule your data export task by adding such lines into your `crontab` (`crontab -e` to edit it):
 
-```
+```sh
 # Everyday at 05:00
 00 5 * * *  ogr2ogr -f GPKG -sql @query_file.sql output.gpkg "PG:service=input_db"
 ```
 
 Run the task and send an email if it failed?
 
-```
+```sh
 00 5 * * *  if ! ogr2ogr -f GPKG -sql @query_file.sql output.gpkg "PG:service=input_db"; then echo "your export failed" | mail -s "failing process" address@mail.me; fi
 ```
 
