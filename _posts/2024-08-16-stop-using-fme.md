@@ -43,15 +43,17 @@ The first step is to have a look at what you need to achieve. Let's see how FME 
 * Data Transformation &rarr; Ok noted
 * Entreprise Automation &rarr; Ok noted
 
-So we get data transformation and automation. Good. Now let's add data reading and writing capabilities because otherwise we don't have much to work with, and it's part of the ETL definition (2/3 of it actually).
+So we get data transformation and automation. Good.
 
-### Data transformation
+### Read, Write and Data transformation
 
-Let's start with the main reason for all of this. We do data transformation to answer needs and questions. Data need to be shaped into different models, linked with other data, to bring additional knowledge. But how do we do that? 
+Let's start with the main reason for all of this. We read, transform and write data to solve problems and answer questions. Data need to be shaped into different models and linked with other data to bring additional knowledge. But how do we do that? 
 
-#### SQL 
+#### Transform with SQL 
 
-If you're working with databases (PostgreSQL, MariaDB or even Oracle), you're probably aware of their spatial capabilities. To me, SQL is a major skill, you can do **a lot** with a single SQL query. There is even a chance that your FME workspace can be entirely replaced by a single SQL query. Who said you can't "transform" your data before even reading it? Write your query, save it as a *view*, and you have your result ready to be read, in sync with your tables.
+If you're working with databases (PostgreSQL, MariaDB or even Oracle), you're probably aware of their spatial capabilities. To me, SQL is a major skill, you can do **a lot** with a single SQL query. There is even a chance that your FME workspace can be entirely replaced by a single SQL query. 
+
+Now we want to Extract, Transform and Load data. Hum but wait, who said you can't "transform" your data before even reading it? SQL allows you to do that; write your query, save it as a *view* if you wish, and you have your result ready to be read, in sync with your tables.
 
 Let's say you have *regions* (polygons), *roads* (lines) and *bus stops* (points), and you want:
 * *road* cut into portions by *region*
@@ -60,7 +62,7 @@ Let's say you have *regions* (polygons), *roads* (lines) and *bus stops* (points
     * if a *road* has no *bus stop* you want to have "No bus stop" instead of 0
 * an attribute that says "Hopp Schwiiz !" if the *road* portion is located in a *region* where attribute *name* is equal to "Switzerland", else "Oh, no Hopp Schwiitz...". 
 
-You could have a FME workspace chaining writers, a clipper, a length calculator, aggregators, attributes managers etc. Or a single SQL query in the form as follow (optimization not included):
+You could have a FME workspace chaining writers, a clipper, a length calculator, aggregators, attributes managers etc. Or a single SQL query in the following manner (optimization not included):
 
 ```sql
 SELECT 
@@ -89,13 +91,13 @@ Another huge advantage of working with SQL is that you're closer to a standard *
 
 You can import other data into your database to use it in your query, or use [Foreign Data Wrappers](https://www.postgresql.org/docs/current/postgres-fdw.html) (FDW) to read data from another database. You can combine your queries with tools such as [dbt](https://docs.getdbt.com/) (Core) to have a more complete environment, or build your own processes, with GDAL or using the programming language of your choice.
 
-#### GDAL
+#### Read and write with GDAL
 
 Back at it with [GDAL](https://www.geothings.ch/posts/gdal-appreciation/), but it's so versatile that it has to be in your toolkit. Your can read and write basically any format, and apply transformations on the fly.
 
 The series of command line tools that come with GDAL/OGR make it very complete and easy to use with raster or vector data.
 
- You could reuse your previous SQL query with GDAL to extract your data and save it in GeoPackage for example, I could just save my query into a file named `query_file.sql` and run the following command:
+ You could reuse your previous SQL query with GDAL to extract your data and save it in GeoPackage for example. I could just save my query into a file named `query_file.sql` and run the following command:
 
 ```sh
 ogr2ogr -f GPKG -sql @query_file.sql output.gpkg "PG:service=input_db"
@@ -103,7 +105,7 @@ ogr2ogr -f GPKG -sql @query_file.sql output.gpkg "PG:service=input_db"
 
 Remember **interoperability**? Well that's a nice example, have one standard way of solving a problem and you can connect it with other without changing anything. **You have many possibilities**.
 
-#### (Python) libraries
+#### Do everything with (Python) libraries
 
 There are a bunch of libraries allowing you to read, transform and write data, using Python but not only. GDAL (omfg again) is also available in many languages through its bindings. If we focus on Python, a list (non-exhaustive of course) of libraries for working with spatial data:
 
@@ -210,7 +212,7 @@ But now let's see what you can do to automate your process.
 
 ### Automation
 
-Not sure about what is so incredible about giving scheduling capabilities within FME when `cron` is available by default in many Linux distributions. If you're working on Windows you can also schedule things with the `Task Scheduler`.
+Not sure about what is so incredible about giving scheduling capabilities within FME when [`cron`](https://en.wikipedia.org/wiki/Cron) is available by default in many Linux distributions. If you're working on Windows you can also schedule things with the `Task Scheduler`.
 
 I feel like I'm oversimplifying things but I can't see where. If you're on Linux, you can schedule your data export task by adding such lines into your `crontab` (`crontab -e` to edit it):
 
@@ -255,5 +257,7 @@ Feels good to rant a bit. To summarize:
 
 * Learn SQL
 * Don't be afraid of command lines and programming languages
-* Use interoperable formats
+* Have interoperability in mind
 * Get away from closed data formats
+
+If want ot talk about all of this or if you need help converting some processes from FME to more open solutions, hit me up on [Mastodon](https://tooting.ch/@jln_brnt) or [Linkedin](https://www.linkedin.com/in/julien-briant/)
