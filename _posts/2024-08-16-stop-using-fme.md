@@ -249,7 +249,7 @@ In this case, the problem is to use a closed data format. To change that is to c
 
 ### And that's it for now
 
-Fortunately there are not much that you can't do without FME. Maybe you won't need to pay for the license for long...
+Fortunately, FME is not that esential. Maybe you won't need to pay for the license for long...
 
 ## Conclusion
 
