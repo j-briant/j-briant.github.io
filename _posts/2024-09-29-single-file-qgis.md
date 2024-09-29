@@ -37,7 +37,7 @@ You now have a Geopackage containing your project.
 
 ## Storing your data in Geopackage
 
-It's rather self-explanatory, your can store all the data used in your project in the same Geopackage. If you use shapefile, [please stop](http://switchfromshapefile.org/), it been making no sense for a while now.
+It's rather self-explanatory, your can store all the data used in your project in the same Geopackage. If you use shapefile, [please stop](https://switchfromshapefile.org/), it been making no sense for a while now.
 
 Convert your data into Geopackage layer by right clicking on your layer of interest:
 
