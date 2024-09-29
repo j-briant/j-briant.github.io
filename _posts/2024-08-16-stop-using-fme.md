@@ -231,7 +231,7 @@ And that's it. I doubt that FME brings so much on the table when it comes to sch
 
 ### And that's it?
 
-I guess not, but I don't think we will find much that are totally unfeasible without FME. 
+I guess not, but I don't think we will find many operations that are totally unfeasible without FME. If I'm missing something, please don't hesitate to correct me.
 
 ## Limitations
 
@@ -249,7 +249,7 @@ In this case, the problem is to use a closed data format. To change that is to c
 
 ### And that's it for now
 
-Fortunately, FME is not that esential. Maybe you won't need to pay for the license for long...
+Fortunately, FME is not that essential. Maybe you won't need to pay for the license for long... But I'm curious to read about what makes it a must-have for you. **What can FME do that other tools cannot? Why is it necessary to you?**
 
 ## Conclusion
 

@@ -207,7 +207,7 @@ And the same can be done using `curl` or `wget` or any network utility you wish:
 curl --request "GET" "localhost:8080/qgis-server/wfs3/collections/planet_osm_polygon/items/2102736" | jq .
 ```
 
-will print me something like:
+will print something like:
 
 ```
 {
