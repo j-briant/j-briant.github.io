@@ -2,7 +2,7 @@
 title: FME is getting expensive? Stop using it
 date: 2024-08-16 10:30:00
 categories: [Discussion, GIS, Data]
-tags: [gis, data, proprietary, price, fme, license]
+tags: [gis, data, proprietary, price, fme, license, python, geospatial, postgresql]
 ---
 
 I have trouble finding what happened at Safe Software at the beginning of 2024, but it seems that part of the company has been [sold to an equity firm](https://betakit.com/us-based-jmi-equity-buys-out-safe-software-co-founder-in-strategic-investment/). No comment on that, but since then licenses prices seem to have taken a hit and customers are.. Well not very happy, especially regarding the communication around this increase:

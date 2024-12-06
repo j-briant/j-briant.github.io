@@ -2,7 +2,7 @@
 title: PMTiles exploration
 date: 2024-02-02 10:30:00
 categories: [Discussion, Introduction, Opensource]
-tags: [pmtiles, gis, data, opensource, tiles, protomaps, cloud, pbf, gdal]
+tags: [pmtiles, gis, data, opensource, tiles, protomaps, cloud, pbf, gdal, geospatial]
 ---
 
 It's a technology that I came across rather recently. Tile generation when maintaining a geographic oriented website can be a hassle: it can take time, generates a lot of files, and can be a critical process. PMTiles might have the potential to facilitate some of this work and we'll try to see how.
