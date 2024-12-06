@@ -9,16 +9,11 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-<<<<<<< HEAD
 timezone: Europe/Zurich
-=======
-timezone:
->>>>>>> v7.2.1
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-<<<<<<< HEAD
 title: geo-things # the main title
 
 tagline: (spatial) data | open source | oversharing # it will display as the sub-title
@@ -32,29 +27,10 @@ url: "https://j-briant.github.io"
 
 github:
   username: j-briant # change to your github username
-=======
-title: Chirpy # the main title
-
-tagline: A text-focused Jekyll theme # it will display as the subtitle
-
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
-
-# Fill in the protocol & hostname for your site.
-# E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
-
-github:
-  username: github_username # change to your GitHub username
-
-twitter:
-  username: twitter_username # change to your Twitter username
->>>>>>> v7.2.1
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-<<<<<<< HEAD
   name: Julien Briant
   email: # change to your email address
   links:
@@ -65,18 +41,6 @@ social:
     # - https://www.facebook.com/username
     
 
-google_site_verification: # fill in to your verification string
-=======
-  name: your_full_name
-  email: example@domain.com # change to your email address
-  links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
-
 # Site Verification Settings
 webmaster_verifications:
   google: # fill in your Google verification code
@@ -85,15 +49,10 @@ webmaster_verifications:
   yandex: # fill in your Yandex verification code
   baidu: # fill in your Baidu verification code
   facebook: # fill in your Facebook verification code
->>>>>>> v7.2.1
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
-<<<<<<< HEAD
-google_analytics:
-  id: # fill in your Google Analytics ID
-=======
 # Web Analytics Settings
 analytics:
   google:
@@ -114,7 +73,6 @@ analytics:
 # Page views settings
 pageviews:
   provider: # now only supports 'goatcounter'
->>>>>>> v7.2.1
 
 # Prefer color scheme setting.
 #
@@ -124,22 +82,6 @@ pageviews:
 #
 # Available options:
 #
-<<<<<<< HEAD
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
-#
-theme_mode:
-
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
-img_cdn:
-
-# the avatar on sidebar, support local or CORS resources
-avatar: 'assets/img/favicons/android-chrome-512x512.png'
-=======
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
@@ -153,25 +95,18 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: 'assets/img/favicons/android-chrome-512x512.png'
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
->>>>>>> v7.2.1
+social_preview_image: 
 
 # boolean type, the global switch for TOC in posts.
 toc: true
 
 comments:
-<<<<<<< HEAD
-  active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  provider: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
-=======
-  # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
-  # The provider options are as follows:
->>>>>>> v7.2.1
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
@@ -180,20 +115,11 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-<<<<<<< HEAD
     repo: j-briant/j-briant.github.io # <gh-username>/<repo>
     repo_id: R_kgDOK3Zfrg
     category: Announcements
     category_id: DIC_kwDOK3Zfrs4Cbw9I
     mapping: # optional, default to 'pathname'
-=======
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
-    mapping: # optional, default to 'pathname'
-    strict: # optional, default to '0'
->>>>>>> v7.2.1
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
@@ -204,12 +130,6 @@ assets:
     enabled: # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
-<<<<<<< HEAD
-    env: # [development|production]
-
-pwa:
-  enabled: true # the option for PWA feature
-=======
     env: # [development | production]
 
 pwa:
@@ -221,14 +141,12 @@ pwa:
     # shares the same domain name as the current website.
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
->>>>>>> v7.2.1
 
 paginate: 10
 
 # The base URL of your site
 baseurl: ""
 
-<<<<<<< HEAD
 # Sitemap generation
 url: "https://www.geothings.ch" # the base hostname & protocol for your site
 plugins:
@@ -236,13 +154,8 @@ plugins:
 
 # ------------ The following options are not recommended to be modified ------------------
 
-kramdown:
-=======
-# ------------ The following options are not recommended to be modified ------------------
-
-kramdown:
+kramdown: 
   footnote_backlink: "&#8617;&#xfe0e;"
->>>>>>> v7.2.1
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
@@ -279,7 +192,6 @@ defaults:
     values:
       layout: page
       permalink: /:title/
-<<<<<<< HEAD
   - scope:
       path: assets/img/favicons
     values:
@@ -288,8 +200,6 @@ defaults:
       path: assets/js/dist
     values:
       swcache: true
-=======
->>>>>>> v7.2.1
 
 sass:
   style: compressed
@@ -310,13 +220,8 @@ exclude:
   - tools
   - README.md
   - LICENSE
-<<<<<<< HEAD
-  - rollup.config.js
-  - package*.json
-=======
   - "*.js"
   - "package*.json"
->>>>>>> v7.2.1
 
 jekyll-archives:
   enabled: [categories, tags]

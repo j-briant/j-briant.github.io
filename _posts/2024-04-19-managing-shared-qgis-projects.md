@@ -2,7 +2,7 @@
 title: Managing shared QGIS projects
 date: 2024-04-19 11:30:00
 categories: [Opensource, QGIS, Organization, Management]
-tags: [gis, data, opensource, qgis, organization, management]
+tags: [gis, data, opensource, qgis, organization, management, geospatial]
 mermaid: true
 ---
 
