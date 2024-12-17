@@ -1,7 +1,7 @@
 ---
 title: PMTiles exploration
 date: 2024-02-02 10:30:00
-categories: [Discussion, Introduction, Opensource]
+categories: [Discussion, Introduction]
 tags: [pmtiles, gis, data, opensource, tiles, protomaps, cloud, pbf, gdal, geospatial]
 ---
 
@@ -135,8 +135,8 @@ Here it's more like a feeling about the philosophy of the specification. You hav
 
 ## Final words
 
-Well it was rather easy to discover. I mean we create a file, we basically load it within a project and we're good to go. Obviously there are some customing to do with styling and labels etc. But once you have the starting point and your tools, it takes minutes to create what you desire.
+Well it was rather easy to discover. I mean we create a file, we basically load it within a project and we're good to go. Obviously there are some customizations to do with styling and labels etc. But once you have the starting point and your tools, it takes minutes to create what you desire.
 
-Here we're just scratching the surface, remains to explore filtering, styling etc. But the concept in itself and the unreasonnable performance of the compression make it very interesting if you're in the situation where PMTiles could give you an advantage; the file created for OSM data Switzerland, with zooms from 0 to 14, is around 1GB, it costs pennies to upload and host on cloud services.
+Here we're just scratching the surface, remains to explore filtering, styling etc. But the concept in itself and the unreasonable performance of the compression make it very interesting if you're in the situation where PMTiles could give you an advantage; the file created for OSM data Switzerland, with zooms from 0 to 14, is around 1GB, it costs pennies to upload and host on cloud services.
 
 It's a project to support and look for, I guess?

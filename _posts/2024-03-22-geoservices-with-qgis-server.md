@@ -1,8 +1,8 @@
 ---
 title: Geoservices with qgis-server
 date: 2024-03-22 10:30:00
-categories: [Tutorial, Introduction, Opensource]
-tags: [gis, data, opensource, raster, wfs, wms, ogc-api, qgis, qgis-server, service, geo-service, api, nginx, geospatial]
+categories: [Tutorial, Introduction]
+tags: [gis, data, opensource, raster, wfs, wms, ogc-api, qgis, qgis-server, service, geo-service, api, nginx, geospatial, tile]
 ---
 
 While the geospatial world has its own particularities that sometimes make it difficult to get on-board or communicate with (see [the spatial exception](https://www.geothings.ch/posts/on-gis/#the-spatial-exception)), we have to admit that some tools and standards developed are both amazing and essential. Geoservices are crucial for the diffusion of georeferenced data, and they drastically changed the way we apprehend our localization; when was the last time you asked for direction?

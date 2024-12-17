@@ -1,8 +1,8 @@
 ---
 title: A little bit of GDAL/OGR appreciation
 date: 2024-01-19 10:30:00
-categories: [Discussion, GDAL]
-tags: [gdal, gis, data, opensource, vector, raster, processing]
+categories: [Discussion]
+tags: [gdal, gis, data, opensource, vector, raster, processing, ogr2ogr, ogr, ogrinfo, translate, fme]
 ---
 
 If there had to be one single tool to work with spatial data, I think GDAL/OGR would be the first name to come to mind. Its usages range from raster to vector, it can be used as command line, imported as a library in many languages through bindings developed by the community, many applications provide UI to parameterize and run GDAL etc. Its versatility makes it an amazing tool to work with spatial data in a lot of different contexts, but it's sometimes underestimated or even misunderstood.

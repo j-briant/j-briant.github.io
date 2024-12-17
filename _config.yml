@@ -14,7 +14,7 @@ timezone: Europe/Zurich
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: geo-things # the main title
+title: geo-things · Things about where and who and how # the main title
 
 tagline: (spatial) data | open source | oversharing # it will display as the sub-title
 

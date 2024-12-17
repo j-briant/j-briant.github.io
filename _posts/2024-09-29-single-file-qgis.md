@@ -1,8 +1,8 @@
 ---
 title: How to build a single file QGIS project?
 date: 2024-09-28 14:30:00
-categories: [Tutorial, GIS, Data, QGIS]
-tags: [gis, data, opensource, qgis, tutorial, geospatial]
+categories: [Tutorial]
+tags: [gis, data, opensource, qgis, tutorial, geospatial, geopackage, project, easy]
 ---
 
 We talked about [how to collaborate on QGIS project](https://www.geothings.ch/posts/managing-shared-qgis-projects/) at a "project management" level, but in practice, how do you make things easy for you to easily share a project. Well, one way is to minimize the amount of files by:

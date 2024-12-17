@@ -1,8 +1,8 @@
 ---
 title: "Building a geospatial strategy, sharing a real world experience - Part 1"
 date: 2024-12-06 14:30:00
-categories: [GIS, Data, Strategy, Project, Discussion]
-tags: [gis, data, management, strategy, geospatial]
+categories: [Discussion]
+tags: [gis, data, management, strategy, geospatial, esri, process, objective]
 ---
 
 I've recently been given the responsibility at my job to implement a "geospatial strategy", whatever this means to the people requesting. Nice, I guess, but I have two conflicting feelings:
